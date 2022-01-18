@@ -1,0 +1,96 @@
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+table a {
+  &:link,
+  &:hover,
+  &:active,
+  &:visited {
+    color: $color-primary;
+  }
+  &:hover {
+    color: darken($color-primary, 20);
+  }
+}
+table th {
+  font-weight: normal;
+}
+table tr {
+  background-color: $color-gray-lighter;
+  border: 1px solid $color-gray-light;
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: right;
+}
+table td {
+  color: $color-primary;
+  font-weight: bold;
+  &::before {
+    color: $color-gray-light;
+    font-weight: bold;
+  }
+}
+table th {
+  //font-size: 1em;
+}
+
+@include phone {
+  table {
+    border: 0;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr:first-child {
+    display: none;
+  }
+
+  table tr:not(:first-child) {
+    border-bottom: 1px solid $color-gray-light;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid $color-gray-light;
+    display: block;
+    font-size: 1.5rem;
+
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: right;
+    color: $color-gray-dark;
+    font-weight: normal;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}

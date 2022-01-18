@@ -1,0 +1,66 @@
+.line2 {
+  margin: 1rem auto;
+  width: 15rem;
+  height: 1px;
+  text-align: center;
+  background-color: #b1aeae;
+}
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    padding: 3rem 0 0;
+    margin: 4rem 0 0;
+    background: #333;
+    flex: 0 0 25%;
+    overflow: hidden;
+    border-radius: 5px;
+    p {
+      text-align: center;
+      color: #fff;
+      padding-top: 1rem;
+    }
+    & ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0;
+      padding: 3rem 1rem;
+      & :not(:last-child) {
+        margin-left: 2rem;
+      }
+      & li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 10px 10px 0;
+
+        & a {
+          color: #fff;
+          display: flex;
+          padding: 1rem;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0px 2rem;
+          & i {
+            margin: 0 auto 1rem auto;
+          }
+          & .active {
+            background: #e8ecef;
+          }
+        }
+      }
+    }
+  }
+  &-content {
+    flex: 1;
+    padding: 3rem 0;
+    & > h2 {
+      margin: 0 auto 3rem 0;
+      //    color: #000;
+    }
+  }
+}

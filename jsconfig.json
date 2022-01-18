@@ -7,7 +7,7 @@
       "@/helpers/*": ["helpers/*"],
       "@/uploads/*": ["uploads/*"],
       "@/utils/*": ["utils/*"],
-      "@/config/*": ["config/*"]
+      "@/styles/*": ["styles/*"]
     }
   }
 }

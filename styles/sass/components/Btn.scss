@@ -1,0 +1,70 @@
+.btn {
+  display: block;
+  padding: 1rem;
+  margin-top: 4rem;
+  background-color: $color-bg-btn;
+  background-image: linear-gradient(#444, #222);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+
+  & i {
+    padding-left: 1rem;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-image: linear-gradient(#444, #111);
+  }
+  &:active {
+    transform: translateY(1px) scale(98%);
+  }
+  &--facebook {
+    background-color: #4c69ba;
+    background-image: linear-gradient(#4c69ba, #3b55a0);
+    text-shadow: 0 -1px 0 #354c8c;
+    & i {
+      padding-left: 2rem;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background-image: linear-gradient(#4c69ba, #2e427e);
+    }
+  }
+  &--danger {
+    background-color: red;
+    background-image: linear-gradient(#f50000, #960000);
+    &:hover {
+      background-image: linear-gradient(#f50000, #dd0000);
+    }
+  }
+}
+
+@include phone {
+  .btn {
+    margin-top: 3rem;
+  }
+}
+
+@include phone {
+  .Btn--facebook {
+    margin: 0.5rem auto;
+  }
+}
+
+/* @include phone {
+  
+  .btn {
+    padding: 10px;
+    display: block;
+    width: 100%;
+  }
+} */

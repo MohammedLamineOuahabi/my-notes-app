@@ -1,0 +1,72 @@
+/**********      width      **********/
+.u-width-100 {
+  width: 100%;
+}
+.u-width-33 {
+  width: 32.5%;
+}
+/**********      colors      **********/
+.u-t-danger {
+  color: red !important;
+}
+.u-t-success {
+  color: #99ff00 !important;
+}
+.u-t-info {
+  color: #5e5efb !important;
+}
+.u-t-white {
+  color: #fff !important;
+}
+.u-b-danger {
+  background-color: red !important;
+}
+.u-b-dark {
+  background-color: #000000 !important;
+}
+.u-b-success {
+  background-color: green !important;
+}
+.u-b-info {
+  background-color: blue !important;
+}
+/**********       text-font size      **********/
+
+.u-t-bold {
+  font-weight: bold !important;
+}
+
+/**********       text-align      **********/
+.u-t-center {
+  text-align: center !important;
+}
+/**********       margin      **********/
+
+.u-mb-large {
+  margin-bottom: 7rem !important;
+}
+.u-mb-medium {
+  margin-bottom: 4rem !important;
+}
+.u-mb-small {
+  margin-bottom: 2rem !important;
+}
+.u-mt-medium {
+  margin-top: 30px !important;
+}
+
+.u-hidden {
+  visibility: hidden;
+}
+
+.u-py-small {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.u-px-small {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+.u-lp-5 {
+  padding-left: 5px !important; //+++
+}

@@ -1,0 +1,42 @@
+@import 'sass/base/typograpy.scss';
+@import 'sass/base/mixins.scss';
+@import 'sass/base/variables.scss';
+@import 'sass/base/base.scss';
+@import 'sass/base/utilities.scss';
+@import 'sass/base/animation.scss';
+@import 'sass/base/table.scss';
+@import 'sass/base/pagination.scss';
+@import 'sass/base/cards.scss';
+
+@import 'sass/containers/Container.scss';
+@import 'sass/containers/AnnouncesContainer.scss';
+@import 'sass/containers/Main.scss';
+@import 'sass/containers/Auth.scss';
+@import 'sass/containers/ProfilePage.scss';
+@import 'sass/containers/StorePage.scss';
+@import 'sass/containers/Categories.scss';
+
+@import 'sass/pages/AnnouncePage.scss';
+@import 'sass/pages/MessagesPage.scss';
+@import 'sass/pages/HomePage.scss';
+@import 'sass/pages/ArticlePage.scss';
+@import 'sass/pages/MyStatsPage.scss';
+
+@import 'sass/components/dashboard-table.scss';
+@import 'sass/components/FlashMessage.scss';
+@import 'sass/components/Breadcrumb.scss';
+@import 'sass/components/ResponsiveTable.scss';
+@import 'sass/components/ChatSession.scss';
+@import 'sass/components/Captcha.scss';
+@import 'sass/components/Loader.scss';
+@import 'sass/components/NavBar.scss';
+@import 'sass/components/Header.scss';
+@import 'sass/components/Footer.scss';
+@import 'sass/components/Ann.scss';
+@import 'sass/components/Announce.scss';
+@import 'sass/components/Btn.scss';
+@import 'sass/components/Form.scss';
+@import 'sass/components/Avatar.scss';
+@import 'sass/components/Category.scss';
+@import 'sass/components/UploadImages.scss';
+@import 'sass/components/Icons.scss';

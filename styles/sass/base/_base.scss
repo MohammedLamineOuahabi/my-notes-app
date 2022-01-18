@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,900&display=swap');
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-family: 'Noto Kufi Arabic', serif;
+  box-sizing: border-box;
+  /*change default root font-size to 10 to make calc of rem easier*/
+  /*20px => 2rem*/
+  /*this defines what 1rem is */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  /*in * we set the value inherit so all  child's of body will inherit border-box value*/
+  box-sizing: border-box;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+form,
+select,
+h1,
+p {
+  font-family: 'Noto Kufi Arabic', serif;
+  border: none;
+}
+h2,
+h3,
+h4 {
+  font-family: serif;
+  border: none;
+  color: $color-gray-darker;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 4rem;
+}
+h2 {
+  margin-bottom: 3.5rem;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  //background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: center;
+  background-color: white;
+}
+section {
+  padding: 3rem 0;
+}

@@ -1,0 +1,119 @@
+.dashboard-table {
+  width: 100%;
+  th {
+    font-weight: bold;
+  }
+  & .image-capture {
+    display: flex;
+    align-items: center;
+  }
+  & .control {
+    white-space: nowrap;
+    width: 9rem;
+  }
+  & .date {
+    white-space: nowrap;
+    width: 12rem;
+  }
+  & .email {
+    white-space: nowrap;
+    width: 8rem;
+  }
+}
+
+.my-announces-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & .list {
+    & .form-btn {
+      background-color: #fff;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: $color-gray-lighter;
+    padding: 1rem;
+    border-radius: 2px;
+    & .image-basic_infos_part {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 30rem;
+      & .image-part {
+        margin-left: 1rem;
+        height: 100px;
+      }
+      & .basic-infos-part {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        & .title {
+          font-size: 1.7rem;
+          font-weight: bold;
+          color: $color-primary;
+        }
+      }
+    }
+
+    & .status-part {
+      margin-left: 1rem;
+      width: 10rem;
+    }
+    & .status-control-part {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      & span:not(:last-child) {
+        margin-left: 1rem;
+      }
+      margin-left: 2rem;
+    }
+    & .controls-parts {
+      display: flex;
+      flex-direction: row;
+      & span:not(:last-child) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+@mixin my-announces-list-phone-tablet {
+  .my-announces-list {
+    & .list {
+      padding: 1rem;
+      flex-direction: column;
+      & > *,
+      & .image-basic_infos_part {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+      }
+      & .status-part {
+        margin-left: 0;
+        width: 100%;
+        justify-content: start;
+      }
+      & .status-control-part {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+      & .controls-parts {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@include phone {
+  @include my-announces-list-phone-tablet;
+}
+
+@include tablet {
+  @include my-announces-list-phone-tablet;
+}

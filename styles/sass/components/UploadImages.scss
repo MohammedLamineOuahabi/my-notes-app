@@ -1,0 +1,80 @@
+.file-input-label {
+  cursor: pointer;
+}
+.upload-images-container {
+  margin: 20px 0;
+  display: grid;
+  grid-template-rows: 200px;
+  //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, minmax(190px, 300px));
+  grid-auto-rows: 200px;
+  gap: 10px;
+
+  .upload-image-box {
+    position: relative;
+    img {
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    & .icon {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 5px 7px 5px 8px;
+      cursor: pointer;
+      border-radius: 50%;
+      //  background: #c1c1c15c;
+      color: white;
+      &--remove {
+        right: 5px;
+      }
+      &--replace {
+        right: 25px;
+      }
+      &:hover {
+        border-radius: 50%;
+        // background: #444444;
+      }
+    }
+  }
+}
+.hide-file-input {
+  // hide the input file
+  // events will be captured by label
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.upload-images-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cfcfcf;
+  background-color: white;
+  &:hover {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+  }
+
+  & span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@include phone {
+  .upload-images-container {
+    grid-template-columns: 1fr;
+  }
+}
+@include tablet {
+  .upload-images-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
