@@ -1,6 +1,6 @@
 import Markdown from '@/components/Markdown/Markdown';
-
-export default function Home({ data }) {
+import SimpleLayout from '@/components/Layout/SimpleLayout';
+function Home({ data }) {
   return (
     <>
       {data.map((note, i) => (
@@ -13,6 +13,9 @@ export default function Home({ data }) {
   );
 }
 
+// page layout as props
+Home.layout = SimpleLayout;
+export default Home;
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API

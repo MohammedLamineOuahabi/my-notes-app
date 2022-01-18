@@ -3,7 +3,7 @@ import ErrorHandler from '@/helpers/utils/errorHandler';
 import catchAsyncErrors from '@/helpers/utils/catchAsyncErrors';
 
 const getNotes = catchAsyncErrors(async (req, res, next) => {
-  const [rows, fields] = await pool.query('SELECT title,content from notes where 1=2 limit 3;');
+  const [rows, fields] = await pool.query('SELECT title,content from notes limit 3;');
 
   if (rows.length === 0) {
     console.log('no notes found');
