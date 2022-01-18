@@ -1,11 +1,15 @@
+import Markdown from '@/components/Markdown/Markdown';
+
 export default function Home({ data }) {
-  console.log('data in home:', data);
   return (
-    <div>
+    <>
       {data.map((note, i) => (
-        <p key={i}>{note.title}</p>
+        <div key={i}>
+          <p>{note.title}</p>
+          <Markdown content={note.content}></Markdown>
+        </div>
       ))}
-    </div>
+    </>
   );
 }
 
@@ -14,6 +18,7 @@ export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(`http://localhost:3000/api/notes`);
   let data = await res.json();
+  console.log('data:', data);
   //  data = JSON.stringify(data.rows);
-  return { props: { data: data.rows } };
+  return { props: { data: data.success ? data.rows : [] } };
 }

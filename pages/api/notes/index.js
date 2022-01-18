@@ -1,10 +1,11 @@
 import nextConnect from 'next-connect';
-import { getNotes } from '@/api-helpers/controllers/noteController';
+import { getNotes } from '@/helpers/controllers/noteController';
+import onError from '@/helpers/middleware/errors/errors';
 
 /*  
   route /api/notes
 */
-const handler = nextConnect();
+const handler = nextConnect({ onError });
 
 handler.get(getNotes);
 
